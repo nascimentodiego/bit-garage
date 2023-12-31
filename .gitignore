@@ -3,5 +3,5 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-.src/network/firebase/FirebaseConst.h
-.src/network/webservice/WebServiceConsts.h
+src/network/firebase/FirebaseConsts.h
+src/network/webservice/WebServiceConsts.h
