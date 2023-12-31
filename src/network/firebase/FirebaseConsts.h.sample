@@ -1,0 +1,14 @@
+#ifndef FIREBASE_CONSTS_H
+#define FIREBASE_CONSTS_H
+
+/* 1. Define the API Key */
+#define API_KEY "_API_Key_"
+
+/* 2. Define the RTDB URL */
+#define DATABASE_URL "url_database" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
+
+/* 3. Define the user Email and password that alreadey registerd or added in your project */
+#define CREDENTIAL_USER "email"
+#define CREDENTIAL_PASS "password" 
+
+#endif //FIREBASE_CONSTS_H

@@ -1,0 +1,9 @@
+#ifndef WEB_SERVICE_CONSTS_H
+#define WEB_SERVICE_CONSTS_H
+
+// Wifi
+const char* ssid = "WiFi name"; 
+const char* password = "passwordmin8digit";
+
+
+#endif //WEB_SERVICE_CONSTS_H
