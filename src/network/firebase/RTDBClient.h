@@ -107,9 +107,6 @@ public:
 
                 if (event == "/A/value")
                 {
-                    Serial.println("Evento A disparado");
-                    Serial.println("");
-                    Serial.printf("Valor:  %s ", value);
                     if (DOOR_A != value)
                     {
                         DOOR_A = value;
