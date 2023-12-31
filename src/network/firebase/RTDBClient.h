@@ -12,8 +12,8 @@
 #include "FirebaseConsts.h"
 
 /* 1. Define the WiFi credentials */
-String WIFI_SSID = "FIGUE";
-String WIFI_PASSWORD = "1imortal";
+String WIFI_SSID = "BIT_SSID";
+String WIFI_PASSWORD = "PASSWORD_WIFI";
 
 String DOOR_A = "";
 String DOOR_B = "";
@@ -113,29 +113,17 @@ public:
                     if (DOOR_A != value)
                     {
                         DOOR_A = value;
-                        Serial.println("Liga o Led");
-
-                        // String rfDoorACode = "1010100110101001001110010101"; // storage.getDoorARFCode();
-                        // char *code = "1010100110101001001110010101";
-                        // char *rfCode;
-
                         String rfDoorACode = storage.getDoorARFCode();
                         sendCode(rfDoorACode);
-
-                        char *cstr = new char[rfDoorACode.length() + 1];
-                        strcpy(cstr, rfDoorACode.c_str());
-
-                        rfTransmit.send(cstr);
                     }
                 }
                 else if (event == "/B/value")
                 {
-                    Serial.println("Evento B disparado");
-                    Serial.println("");
-                    Serial.printf("Valor:  %s ", value);
-
-                    String rfDoorACode = storage.getDoorBRFCode();
-                    sendCode(rfDoorACode);
+                    if(DOOR_B != value){
+                        DOOR_B = value;
+                        String rfDoorBCode = storage.getDoorBRFCode();
+                        sendCode(rfDoorBCode);
+                    }
                 }
             }
 

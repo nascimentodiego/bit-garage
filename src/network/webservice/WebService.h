@@ -40,28 +40,16 @@ void handleBody()
     Serial.println("");
     if (myObject.hasOwnProperty("ssid"))
     {
-        Serial.println("ssid -> ");
         String ssid = myObject["ssid"];
-        Serial.print(ssid);
-
-        // Save SSID
         storage.putWiFiSSID(ssid);
     }
     Serial.println("");
     if (myObject.hasOwnProperty("pass"))
     {
-        Serial.println("pass -> ");
         String pass = myObject["pass"];
-        Serial.print(pass);
-
-        // SAVE WiFi Password
         storage.putWifiPass(pass);
     }
-    // if (myObject.hasOwnProperty("pass") && myObject.hasOwnProperty("ssid"))
-    // {
-    //     storage.putOperationMode(READY_BIT_MODE);
-    //     biT.resetDevice();
-    // }
+
 };
 
 void handleRecordBody()
