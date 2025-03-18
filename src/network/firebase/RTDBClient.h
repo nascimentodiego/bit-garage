@@ -95,12 +95,12 @@ public:
 
             if (fbdo.streamAvailable())
             {
-                // Serial.printf("sream path, %s\nevent path, %s\ndata type, %s\nevent type, %s\nvalue, %s\n\n",
-                //               fbdo.streamPath().c_str(),
-                //               fbdo.dataPath().c_str(),
-                //               fbdo.dataType().c_str(),
-                //               fbdo.eventType().c_str(),
-                //               fbdo.stringData().c_str());
+                Serial.printf("sream path, %s\nevent path, %s\ndata type, %s\nevent type, %s\nvalue, %s\n\n",
+                              fbdo.streamPath().c_str(),
+                              fbdo.dataPath().c_str(),
+                              fbdo.dataType().c_str(),
+                              fbdo.eventType().c_str(),
+                              fbdo.stringData().c_str());
 
                 String event = fbdo.dataPath().c_str();
                 String value = fbdo.stringData().c_str();
@@ -129,6 +129,7 @@ public:
             {
                 // Server was disconnected!
                 Serial.println("Server was disconnected!");
+                biT.resetDevice();
             }
         }
     }
